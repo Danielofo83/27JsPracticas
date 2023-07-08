@@ -496,25 +496,28 @@ const people = [
   ["Hola, soy {nombre_completo} y tengo {edad} años"] */
 
     let fullNameAgeList = (people) => { 
+     /*  {
+        gender: "male",
+        name: {
+          title: "Mr",
+          first: "Alexis",
+          last: "Nguyen",
+        },
+        dob: {
+          date: "1994-10-08T06:03:13.198Z",
+          age: 28,
+        },
+        nat: "FR",
+      }, */
+
         let result = people.map((nameAge) =>{
-            let fullname= `${nameAge.name} ${nameAge.lastname} ${nameAge.age}`;
+            let fullname= ` Hola, soy ${nameAge.name.first} ${nameAge.name.last} y tengo  ${nameAge.dob.age} años`;
             return fullname;
-        
         });
         return result; 
-    }
+      }
         let fullnamesAge = fullNameAgeList(people); 
         console.log(fullnamesAge);
-
-
-    /*
- let createFullNamesList = (koders) => {
-  /*["Maximilian Fahmel", "Daniel Antipov"]*/
-  /* let result = koders.map((koder) => {
-    let fullname = `${koder.name} ${koder.lastname}`;
-    return fullname;
-  });
-  return result; */
 
   /*2.- Necesito obtener una lista con las nacionalidades que se encuentran actualmente en la lista original
   ["MX","IE"...]*/
